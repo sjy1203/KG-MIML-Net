@@ -1,0 +1,27 @@
+{
+    "model_name": "seq2seq", 
+    "data_path": "data", 
+    "use_cuda": true, 
+    "resume": false, 
+    "max_len": 20, 
+    "resume_path": "saved/seq2seq/seq2seq-final.ckpt", 
+    "log_step": 100, 
+    "save_step": 300, 
+    "model": {
+        "dim_word_src": 300, 
+        "dim_word_trg": 300, 
+        "dim": 600, 
+        "bidirectional": false, 
+        "add_contextual_layer": false, 
+        "add_tree_embedding": false, 
+        "add_supervised": false, 
+        "initial_embedding": false, 
+        "add_tree_inputs_embedding": false, 
+        "add_tree_outputs_embedding": false
+    }, 
+    "train": {
+        "batch_size": 32, 
+        "lr": 0.001, 
+        "epoch": 40
+    }
+}
